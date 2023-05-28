@@ -718,6 +718,8 @@ class Api:
             content:
 
                 * corr (`float`)
+                * corr20V2 (`float` or None)
+                * corr20V2Percentile (`float` or None)
                 * corr20d (`float` or None)
                 * corr20dPercentile (`float` or None)
                 * corrMultiplier (`float`)
@@ -725,6 +727,7 @@ class Api:
                 * corrWMetamodel (`float`)
                 * tc (`float`)
                 * tcPercentile (`float`)
+                * tcMultiplier (`float`)
                 * ic (`float`)
                 * icPercentile (`float`)
                 * fnc (`float`)
@@ -749,6 +752,8 @@ class Api:
             >>> api = NumerAPI()
             >>> api.round_model_performances("uuazed")
             [{'corr': -0.01296840448965,
+             'corr20V2': None,
+             'corr20V2Percentile': None,
              'corr20d': None,
              'corr20dPercentile': None,
              'corrMultiplier': 1.0,
@@ -756,6 +761,7 @@ class Api:
              'corrWMetamodel': 0.51542251407092,
              'tc': 0.1415973344,
              'tcPercentile': 0.115398485394879,
+             'tcMultiplier': 2.0,
              'ic': 0.1415973344,
              'icPercentile': 0.115398485394879,
              'fnc': 0.000437631996046271,
@@ -791,6 +797,8 @@ class Api:
             {endpoint}(modelName: $username) {{
               roundModelPerformances {{
                 corr
+                corr20V2
+                corr20V2Percentile
                 corr20d
                 corr20dPercentile
                 corrMultiplier
@@ -798,6 +806,7 @@ class Api:
                 corrWMetamodel
                 tc
                 tcPercentile
+                tcMultiplier
                 ic
                 icPercentile
                 fnc
