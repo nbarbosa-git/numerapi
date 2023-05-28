@@ -718,8 +718,6 @@ class Api:
             content:
 
                 * corr (`float`)
-                * corr20V2 (`float` or None)
-                * corr20V2Percentile (`float` or None)
                 * corr20d (`float` or None)
                 * corr20dPercentile (`float` or None)
                 * corrMultiplier (`float`)
@@ -751,8 +749,6 @@ class Api:
             >>> api = NumerAPI()
             >>> api.round_model_performances("uuazed")
             [{'corr': -0.01296840448965,
-             'corr20V2': None,
-             'corr20V2Percentile': None,
              'corr20d': None,
              'corr20dPercentile': None,
              'corrMultiplier': 1.0,
@@ -795,8 +791,6 @@ class Api:
             {endpoint}(modelName: $username) {{
               roundModelPerformances {{
                 corr
-                corr20V2
-                corr20V2Percentile
                 corr20d
                 corr20dPercentile
                 corrMultiplier
